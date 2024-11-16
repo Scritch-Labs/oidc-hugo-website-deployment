@@ -15,6 +15,8 @@ if [ ! -d "$FOLDER_PATH" ]; then
     exit 1
 fi
 
+cd $FOLDER_PATH
+
 # Build the Hugo site
 echo "Building the Hugo site."
 hugo_command_output=$(hugo)
