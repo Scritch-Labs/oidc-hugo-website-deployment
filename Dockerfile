@@ -8,7 +8,7 @@ ENV AWS_SECRET_ACCESS_KEY=bogussecret
 ENV AWS_SESSION_TOKEN=bogustoken
 ENV AWS_REGION=us-west-2
 
-RUN apt-get update && apt-get install -y \
+RUN apt update && apt install -y \
     curl \
     unzip \
     hugo
