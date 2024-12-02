@@ -11,7 +11,10 @@ ENV AWS_REGION=us-west-2
 RUN apt update && apt install -y \
     curl \
     unzip \
-    hugo
+    wget
+
+RUN wget https://github.com/gohugoio/hugo/releases/download/v0.139.3/hugo_0.139.3_linux-amd64.deb && \
+    dpkg --install hugo_0.139.3_linux-amd64.deb
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
