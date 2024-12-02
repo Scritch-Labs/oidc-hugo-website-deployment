@@ -16,7 +16,7 @@ if [ ! -d "$FOLDER_PATH" ]; then
 fi
 
 # Build the Hugo site
-echo "Building the Hugo site."
+echo "Building the Hugo site with Hugo version: $(hugo version)."
 hugo_command_output=$(hugo --source $FOLDER_PATH)
 hugo_command_exit_code=$?
 
